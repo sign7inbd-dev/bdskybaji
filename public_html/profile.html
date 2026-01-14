@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রোফাইল - Sky Baji</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sky Baji</div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">ড্যাশবোর্ড</a></li>
+                <li><a href="games.html">গেমস</a></li>
+                <li><a href="profile.html">প্রোফাইল</a></li>
+            </ul>
+            <div class="auth-links">
+                <button class="btn-logout">লগআউট</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <div class="profile-container">
+            <!-- Profile Tabs -->
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="personal">ব্যক্তিগত তথ্য</button>
+                <button class="tab-btn" data-tab="kyc">KYC যাচাইকরণ</button>
+                <button class="tab-btn" data-tab="payment">পেমেন্ট পদ্ধতি</button>
+                <button class="tab-btn" data-tab="security">নিরাপত্তা</button>
+            </div>
+
+            <!-- Personal Info Tab -->
+            <div class="tab-content active" id="personal-tab">
+                <h2>ব্যক্তিগত তথ্য</h2>
+                <form id="personalForm">
+                    <div class="form-group">
+                        <label>সম্পূর্ণ নাম</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ইমেইল</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>মোবাইল নম্বর</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>জন্ম তারিখ</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ঠিকানা</label>
+                        <textarea id="address" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">সংরক্ষণ করুন</button>
+                </form>
+            </div>
+
+            <!-- KYC Tab -->
+            <div class="tab-content" id="kyc-tab">
+                <h2>KYC যাচাইকরণ</h2>
+                <div class="kyc-status">
+                    <p>স্ট্যাটাস: <span id="kycStatus">অপেক্ষমান</span></p>
+                </div>
+                <form id="kycForm">
+                    <div class="form-group">
+                        <label>জাতীয় পরিচয়পত্র নম্বর</label>
+                        <input type="text" id="nid" required>
+                    </div>
+                    <div class="form-group">
+                        <label>জাতীয় পরিচয়পত্র ছবি</label>
+                        <input type="file" id="nidFile" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ঠিকানা প্রমাণ</label>
+                        <input type="file" id="addressProof" accept="image/*" required>
+                    </div>
+                    <button type="submit" class="btn-primary">জমা দিন</button>
+                </form>
+            </div>
+
+            <!-- Payment Methods Tab -->
+            <div class="tab-content" id="payment-tab">
+                <h2>পেমেন্ট পদ্ধতি</h2>
+                <div class="payment-methods">
+                    <div class="method-card">
+                        <h4>bKash</h4>
+                        <p>মোবাইল নম্বর: ****</p>
+                        <button class="btn-secondary">সম্পাদনা করুন</button>
+                    </div>
+                    <div class="method-card">
+                        <h4>Nagad</h4>
+                        <p>মোবাইল নম্বর: ****</p>
+                        <button class="btn-secondary">সম্পাদনা করুন</button>
+                    </div>
+                    <div class="method-card">
+                        <h4>Rocket</h4>
+                        <p>মোবাইল নম্বর: ****</p>
+                        <button class="btn-secondary">সম্পাদনা করুন</button>
+                    </div>
+                </div>
+                <button class="btn-primary">নতুন পদ্ধতি যোগ করুন</button>
+            </div>
+
+            <!-- Security Tab -->
+            <div class="tab-content" id="security-tab">
+                <h2>নিরাপত্তা</h2>
+                <div class="security-option">
+                    <h4>পাসওয়ার্ড পরিবর্তন করুন</h4>
+                    <button class="btn-secondary" onclick="togglePasswordForm()">পাসওয়ার্ড পরিবর্তন করুন</button>
+                </div>
+                <div class="security-option">
+                    <h4>দুই-ফ্যাক্টর অথেন্টিকেশন</h4>
+                    <button class="btn-secondary">সক্ষম করুন</button>
+                </div>
+                <div class="security-option">
+                    <h4>সক্রিয় সেশন</h4>
+                    <button class="btn-secondary">সব সেশন থেকে বেরিয়ে যান</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sky Baji. সব অধিকার সংরক্ষিত।</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>

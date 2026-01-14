@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উত্তোলন করুন - Sky Baji</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sky Baji</div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">ড্যাশবোর্ড</a></li>
+                <li><a href="profile.html">প্রোফাইল</a></li>
+            </ul>
+            <div class="auth-links">
+                <button class="btn-logout">লগআউট</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="withdraw-page">
+        <div class="withdraw-container">
+            <h1>উত্তোলন করুন</h1>
+
+            <!-- Account Balance -->
+            <section class="balance-section">
+                <div class="balance-card">
+                    <p>উপলব্ধ ব্যালেন্স</p>
+                    <h2 id="availableBalance">৳ 0.00</h2>
+                    <p class="balance-note">প্রয়োজনীয় ন্যূনতম উত্তোলন: ৳ 500</p>
+                </div>
+            </section>
+
+            <!-- Withdrawal Methods -->
+            <section class="withdrawal-methods-section">
+                <h2>উত্তোলনের পদ্ধতি নির্বাচন করুন</h2>
+                <div class="methods-grid">
+                    <div class="method-option" onclick="selectWithdrawMethod('bkash')">
+                        <div class="method-icon">📱</div>
+                        <h3>bKash</h3>
+                        <p>1-2 মিনিট</p>
+                    </div>
+                    <div class="method-option" onclick="selectWithdrawMethod('nagad')">
+                        <div class="method-icon">💳</div>
+                        <h3>Nagad</h3>
+                        <p>1-2 মিনিট</p>
+                    </div>
+                    <div class="method-option" onclick="selectWithdrawMethod('rocket')">
+                        <div class="method-icon">🚀</div>
+                        <h3>Rocket</h3>
+                        <p>1-2 মিনিট</p>
+                    </div>
+                    <div class="method-option" onclick="selectWithdrawMethod('bank')">
+                        <div class="method-icon">🏦</div>
+                        <h3>ব্যাংক অ্যাকাউন্ট</h3>
+                        <p>1-3 ঘন্টা</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Withdrawal Form -->
+            <section class="withdraw-form-section">
+                <form id="withdrawForm">
+                    <div class="form-group">
+                        <label for="withdrawAmount">উত্তোলনের পরিমাণ</label>
+                        <input type="number" id="withdrawAmount" min="500" max="500000" step="100" placeholder="পরিমাণ প্রবেশ করুন" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accountNumber">অ্যাকাউন্ট নম্বর</label>
+                        <input type="text" id="accountNumber" placeholder="আপনার অ্যাকাউন্ট নম্বর প্রবেশ করুন" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accountHolder">অ্যাকাউন্ট হোল্ডারের নাম</label>
+                        <input type="text" id="accountHolder" placeholder="নাম প্রবেশ করুন" required>
+                    </div>
+
+                    <!-- Charges Info -->
+                    <div class="charges-info">
+                        <h4>ফি এবং সময়</h4>
+                        <p>উত্তোলনের ফি: <strong id="withdrawFee">0</strong> টাকা</p>
+                        <p>আপনি পাবেন: <strong id="finalAmount">0</strong> টাকা</p>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block">উত্তোলন অনুরোধ জমা দিন</button>
+                </form>
+            </section>
+
+            <!-- Withdrawal History -->
+            <section class="withdrawal-history">
+                <h2>উত্তোলনের ইতিহাস</h2>
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>পরিমাণ</th>
+                            <th>পদ্ধতি</th>
+                            <th>তারিখ</th>
+                            <th>স্ট্যাটাস</th>
+                        </tr>
+                    </thead>
+                    <tbody id="withdrawalsBody">
+                        <!-- ডেটা JS দিয়ে লোড হবে -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sky Baji. সব অধিকার সংরক্ষিত।</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>

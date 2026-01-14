@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>স্পোর্টস বেটিং - Sky Baji</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sky Baji</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">হোম</a></li>
+                <li><a href="games.html">গেমস</a></li>
+                <li><a href="sports.html">স্পোর্টস</a></li>
+                <li><a href="live-casino.html">লাইভ ক্যাসিনো</a></li>
+                <li><a href="promotions.html">অফার</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="dashboard.html" class="btn-dashboard">ড্যাশবোর্ড</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="sports-page">
+        <div class="sports-container">
+            <!-- Sports Sidebar -->
+            <aside class="sports-sidebar">
+                <h3>খেলা নির্বাচন করুন</h3>
+                <div class="sports-list">
+                    <button class="sport-btn active" data-sport="football">
+                        🏀 ফুটবল
+                    </button>
+                    <button class="sport-btn" data-sport="cricket">
+                        🏏 ক্রিকেট
+                    </button>
+                    <button class="sport-btn" data-sport="basketball">
+                        🏀 বাস্কেটবল
+                    </button>
+                    <button class="sport-btn" data-sport="tennis">
+                        🎾 টেনিস
+                    </button>
+                    <button class="sport-btn" data-sport="horse-racing">
+                        🐴 ঘোড়ার দৌড়
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Matches Section -->
+            <section class="sports-content">
+                <h2>আজকের ম্যাচ</h2>
+                <div class="matches-container" id="matchesContainer">
+                    <!-- ম্যাচ এখানে লোড হবে -->
+                </div>
+            </section>
+
+            <!-- Bet Slip -->
+            <aside class="bet-slip">
+                <h3>বেট স্লিপ</h3>
+                <div id="betSlip" class="bet-slip-content">
+                    <p>কোন বেট নির্বাচিত নেই</p>
+                </div>
+                <button class="btn-primary btn-block">বেট প্লেস করুন</button>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sky Baji. সব অধিকার সংরক্ষিত।</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>

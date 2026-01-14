@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>জমা করুন - Sky Baji</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sky Baji</div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">ড্যাশবোর্ড</a></li>
+                <li><a href="profile.html">প্রোফাইল</a></li>
+            </ul>
+            <div class="auth-links">
+                <button class="btn-logout">লগআউট</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="deposit-page">
+        <div class="deposit-container">
+            <h1>জমা করুন</h1>
+
+            <!-- Payment Methods -->
+            <section class="payment-methods-section">
+                <h2>পেমেন্ট পদ্ধতি নির্বাচন করুন</h2>
+                <div class="methods-grid">
+                    <div class="method-option" onclick="selectMethod('bkash')">
+                        <div class="method-icon">📱</div>
+                        <h3>bKash</h3>
+                        <p>তাৎক্ষণিক লেনদেন</p>
+                    </div>
+                    <div class="method-option" onclick="selectMethod('nagad')">
+                        <div class="method-icon">💳</div>
+                        <h3>Nagad</h3>
+                        <p>নিরাপদ এবং দ্রুত</p>
+                    </div>
+                    <div class="method-option" onclick="selectMethod('rocket')">
+                        <div class="method-icon">🚀</div>
+                        <h3>Rocket</h3>
+                        <p>সহজ জমা</p>
+                    </div>
+                    <div class="method-option" onclick="selectMethod('bank')">
+                        <div class="method-icon">🏦</div>
+                        <h3>ব্যাংক ট্রান্সফার</h3>
+                        <p>সরাসরি জমা</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Deposit Form -->
+            <section class="deposit-form-section">
+                <h2>জমার পরিমাণ নির্বাচন করুন</h2>
+                <form id="depositForm">
+                    <div class="amount-presets">
+                        <button type="button" class="amount-btn" onclick="setAmount(500)">৳ 500</button>
+                        <button type="button" class="amount-btn" onclick="setAmount(1000)">৳ 1,000</button>
+                        <button type="button" class="amount-btn" onclick="setAmount(5000)">৳ 5,000</button>
+                        <button type="button" class="amount-btn" onclick="setAmount(10000)">৳ 10,000</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="customAmount">কাস্টম পরিমাণ</label>
+                        <input type="number" id="customAmount" min="100" max="500000" step="100" placeholder="পরিমাণ প্রবেশ করুন">
+                    </div>
+
+                    <!-- Bonus Info -->
+                    <div class="bonus-info">
+                        <h4>বোনাস তথ্য</h4>
+                        <p>এই জমায় আপনি পাবেন <strong>100% বোনাস</strong></p>
+                        <p>বোনাস পরিমাণ: <span id="bonusAmount">0</span> টাকা</p>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block">জমা করতে এগিয়ে যান</button>
+                </form>
+            </section>
+
+            <!-- Recent Deposits -->
+            <section class="recent-deposits">
+                <h2>সাম্প্রতিক জমা</h2>
+                <table class="deposits-table">
+                    <thead>
+                        <tr>
+                            <th>পরিমাণ</th>
+                            <th>পদ্ধতি</th>
+                            <th>তারিখ</th>
+                            <th>স্ট্যাটাস</th>
+                        </tr>
+                    </thead>
+                    <tbody id="depositsBody">
+                        <!-- ডেটা JS দিয়ে লোড হবে -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sky Baji. সব অধিকার সংরক্ষিত।</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>

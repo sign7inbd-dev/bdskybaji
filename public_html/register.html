@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রেজিস্টার - Sky Baji</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-form">
+            <h1>নতুন অ্যাকাউন্ট তৈরি করুন</h1>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="fullname">সম্পূর্ণ নাম</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">মোবাইল নম্বর</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+880..." required>
+                </div>
+                <div class="form-group">
+                    <label for="email">ইমেইল</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">পাসওয়ার্ড</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">পাসওয়ার্ড নিশ্চিত করুন</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">আমি শর্তাবলী সম্মত করি</label>
+                </div>
+                <button type="submit" class="btn-primary btn-block">রেজিস্টার করুন</button>
+            </form>
+            <p class="auth-switch">
+                অ্যাকাউন্ট আছে? <a href="login.html">লগইন করুন</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

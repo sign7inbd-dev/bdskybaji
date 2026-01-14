@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>হোমপেজ - Sky Baji</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sky Baji</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">হোম</a></li>
+                <li><a href="games.html">গেমস</a></li>
+                <li><a href="sports.html">স্পোর্টস</a></li>
+                <li><a href="live-casino.html">লাইভ ক্যাসিনো</a></li>
+                <li><a href="promotions.html">অফার</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="login.html" class="btn-login">লগইন</a>
+                <a href="register.html" class="btn-register">রেজিস্টার</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Promotions Section -->
+        <section class="promotions-section">
+            <div class="banner-container">
+                <img src="images/banner/main-banner.jpg" alt="প্রমোশন" class="banner">
+                <div class="banner-overlay">
+                    <h1>বিশাল বোনাস পান</h1>
+                    <p>প্রথম জমার উপর 100% বোনাস</p>
+                    <a href="register.html" class="btn-primary">এখনই যোগ দিন</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Section -->
+        <section class="live-section">
+            <h2>লাইভ এখন</h2>
+            <div class="live-games">
+                <div class="live-item">
+                    <span class="live-badge">LIVE</span>
+                    <h3>লাইভ ব্যাকারেট</h3>
+                    <p>500+ খেলোয়াড়</p>
+                </div>
+                <div class="live-item">
+                    <span class="live-badge">LIVE</span>
+                    <h3>লাইভ রুলেট</h3>
+                    <p>300+ খেলোয়াড়</p>
+                </div>
+                <div class="live-item">
+                    <span class="live-badge">LIVE</span>
+                    <h3>লাইভ পোকার</h3>
+                    <p>250+ খেলোয়াড়</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games List Section -->
+        <section class="games-section">
+            <h2>জনপ্রিয় গেমস</h2>
+            <div class="games-grid" id="gamesGrid">
+                <!-- গেমস javascript দিয়ে লোড হবে -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sky Baji. সব অধিকার সংরক্ষিত।</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>

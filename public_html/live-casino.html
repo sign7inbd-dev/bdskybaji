@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>লাইভ ক্যাসিনো - Sky Baji</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sky Baji</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">হোম</a></li>
+                <li><a href="games.html">গেমস</a></li>
+                <li><a href="sports.html">স্পোর্টস</a></li>
+                <li><a href="live-casino.html">লাইভ ক্যাসিনো</a></li>
+                <li><a href="promotions.html">অফার</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="dashboard.html" class="btn-dashboard">ড্যাশবোর্ড</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="live-casino-page">
+        <div class="live-casino-container">
+            <!-- Game Categories -->
+            <section class="game-categories">
+                <h2>লাইভ ক্যাসিনো গেমস</h2>
+                <div class="categories-tabs">
+                    <button class="category-tab active" data-category="all">সব</button>
+                    <button class="category-tab" data-category="roulette">রুলেট</button>
+                    <button class="category-tab" data-category="blackjack">ব্ল্যাকজ্যাক</button>
+                    <button class="category-tab" data-category="baccarat">ব্যাকারেট</button>
+                    <button class="category-tab" data-category="poker">পোকার</button>
+                    <button class="category-tab" data-category="dragon-tiger">ড্রাগন টাইগার</button>
+                </div>
+            </section>
+
+            <!-- Live Tables Grid -->
+            <section class="live-tables">
+                <div class="tables-grid" id="liveTables">
+                    <!-- লাইভ টেবিল এখানে লোড হবে -->
+                </div>
+            </section>
+
+            <!-- Live Chat Section -->
+            <section class="live-chat">
+                <h3>লাইভ চ্যাট</h3>
+                <div class="chat-messages" id="chatMessages">
+                    <!-- চ্যাট মেসেজ এখানে দেখাবে -->
+                </div>
+                <input type="text" id="chatInput" placeholder="মেসেজ টাইপ করুন...">
+                <button class="btn-primary">পাঠান</button>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sky Baji. সব অধিকার সংরক্ষিত।</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>
