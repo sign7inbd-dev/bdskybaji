@@ -73,7 +73,19 @@
         <p>&copy; 2024 Sky Baji. সব অধিকার সংরক্ষিত।</p>
     </footer>
 
+    <!-- Fake Data -->
+    <script src="api/fake-data.js"></script>
+    <!-- Main JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/games.js"></script>
     <script src="js/api.js"></script>
+    
+    <script>
+        // Initialize homepage games on load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadHomepageGames();
+        });
+    </script>
 </body>
 </html>

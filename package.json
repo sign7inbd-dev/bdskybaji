@@ -1,0 +1,35 @@
+{
+  "name": "sky-baji",
+  "version": "1.0.0",
+  "description": "একটি আধুনিক অনলাইন বেটিং এবং ক্যাসিনো প্ল্যাটফর্ম যা বাংলাদেশী ব্যবহারকারীদের জন্য ডিজাইন করা হয়েছে।",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd public_html && python -m http.server 8000",
+    "dev": "cd public_html && npx http-server",
+    "serve": "cd public_html && npx live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "betting",
+    "casino",
+    "gaming",
+    "bangladesh",
+    "bkash",
+    "nagad",
+    "rocket"
+  ],
+  "author": "Sky Baji Team",
+  "license": "PRIVATE",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sign7inbd-dev/bdskybaji.git"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "optionalDependencies": {}
+}
